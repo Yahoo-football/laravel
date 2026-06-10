@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\CustomerController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', [UserController::class, 'index'])->name('users.index');
 
