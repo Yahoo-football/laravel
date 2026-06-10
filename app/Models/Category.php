@@ -3,16 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
+
 class Category extends Model
 {
     protected $fillable = [
         'name',
-        'dec'
+        'dec',
+        'is_active',
     ];
-    public function index()
-    {
-       $categories = DB::table('categories')->get();
-       return $categories;
-    }
+
+    protected $casts = [
+        'is_active' => 'boolean',
+    ];
 }
